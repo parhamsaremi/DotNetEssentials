@@ -4,7 +4,7 @@
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
     <AssemblyName>Xamarin.Essentials</AssemblyName>
     <RootNamespace>Xamarin.Essentials</RootNamespace>
-    <PackageId>Xamarin.Essentials</PackageId>
+    <PackageId>DotNetEssentials</PackageId>
     <PackageIcon>icon.png</PackageIcon>
     <!-- <PackageIconUrl>https://raw.githubusercontent.com/xamarin/Essentials/master/Assets/xamarin.essentials_128x128.png</PackageIconUrl> -->
     <Summary>Xamarin.Essentials: a kit of essential API's for your apps</Summary>
@@ -20,14 +20,14 @@
     <Owners>microsoft,Xamarin,XamarinNuGet</Owners>
     <NeutralLanguage>en</NeutralLanguage>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <RepositoryUrl>https://github.com/xamarin/Essentials</RepositoryUrl>
+    <RepositoryUrl>https://github.com/nblockchain/DotNetEssentials</RepositoryUrl>
     <PackageReleaseNotes>See: https://aka.ms/xamarinessentials-releasenotes</PackageReleaseNotes>
     <DefineConstants>$(DefineConstants);</DefineConstants>
     <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=868960</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/nblockchain/DotNetEssentials</PackageProjectUrl>
     <MDocDocumentationDirectory>$(MSBuildThisFileDirectory)..\docs\en</MDocDocumentationDirectory>
     <DebugType>portable</DebugType>
     <Configurations>Debug;Release</Configurations>
