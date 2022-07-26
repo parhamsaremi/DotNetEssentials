@@ -1,6 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;netstandard2.0;Xamarin.iOS10;Xamarin.TVOS10;Xamarin.WatchOS10;MonoAndroid80;MonoAndroid81;MonoAndroid90;MonoAndroid10.0;tizen40;Xamarin.Mac20;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.TVOS10;Xamarin.WatchOS10;MonoAndroid80;MonoAndroid81;MonoAndroid90;MonoAndroid10.0;tizen40;Xamarin.Mac20;</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
     <AssemblyName>Xamarin.Essentials</AssemblyName>
     <RootNamespace>Xamarin.Essentials</RootNamespace>
@@ -54,9 +54,6 @@
     <PackageReference Include="Xamarin.Build.TypeRedirector" Version="0.1.2-preview" PrivateAssets="all" />
     <Compile Include="**\*.shared.cs" />
     <Compile Include="**\*.shared.*.cs" />
-  </ItemGroup>
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard1.')) ">
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
