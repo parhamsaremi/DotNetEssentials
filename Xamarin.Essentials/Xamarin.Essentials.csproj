@@ -59,6 +59,19 @@
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
     <Compile Include="**\*.netstandard.cs" />
     <Compile Include="**\*.netstandard.*.cs" />
+    <!-- Always reference GTK-Sharp libs, even on platforms where they are absent. Runtime checks are performed. -->
+    <Reference Include="gtk-sharp, Version=2.12.0.0">
+      <HintPath>../Libs/gtk-sharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0">
+      <HintPath>../Libs/glib-sharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0">
+      <HintPath>../Libs/gdk-sharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.9" PrivateAssets="all" />
