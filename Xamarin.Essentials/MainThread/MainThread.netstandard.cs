@@ -6,12 +6,14 @@ namespace Xamarin.Essentials
     public static partial class MainThread
     {
 #pragma warning disable SA1130
-        static void PlatformBeginInvokeOnMainThread(Action action){
+        static void PlatformBeginInvokeOnMainThread(Action action)
+        {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 Gtk.Application.Invoke(delegate { action(); });
             else
                 throw ExceptionUtils.NotSupportedOrImplementedException;
         }
+
         static int? uiThreadId = null;
 
         static bool PlatformIsMainThread
@@ -22,7 +24,7 @@ namespace Xamarin.Essentials
                 {
                     if (uiThreadId == null)
                     {
-                        Gtk.Application.Invoke(delegate { uiThreadId = Thread.CurrentThread.ManagedThreadId; });
+                        Gtk.Application.Invoke(delegate { uiThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId; });
                         return false;
                     }
                     else
